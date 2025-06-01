@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 CATÁLOGO STREAMING 2025 🔥</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-attachment: fixed;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffecd2);
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideInDown 1s ease-out;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            from { filter: drop-shadow(0 0 5px rgba(255,255,255,0.8)); }
+            to { filter: drop-shadow(0 0 15px rgba(255,255,255,1)); }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .section {
+            background: rgba(255,255,255,0.1);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: slideInUp 0.8s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            border-radius: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-card {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .service-card:hover::before {
+            animation: shimmer 1s ease-in-out;
+            opacity: 1;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffd700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .service-item {
+            margin: 8px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #4ecdc4;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .combo-section {
+            background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(78,205,196,0.2));
+        }
+        
+        .combo-card {
+            background: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 2px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .combo-card::before {
+            content: '🔥';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .combo-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .combo-savings {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(255,107,107,0.5); }
+            to { box-shadow: 0 0 20px rgba(78,205,196,0.8); }
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, rgba(69,183,209,0.3), rgba(150,206,180,0.3));
+            text-align: center;
+        }
+        
+        .contact-info {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(37,211,102,0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37,211,102,0.5);
+        }
+        
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @keyframes slideInDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes slideInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .guarantee-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            animation: rotate 2s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .container { padding: 10px; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="floating-elements">
+        <div class="floating-emoji" style="top: 10%; left: 10%; animation-delay: 0s;">🎬</div>
+        <div class="floating-emoji" style="top: 20%; right: 15%; animation-delay: 1s;">🔥</div>
+        <div class="floating-emoji" style="bottom: 30%; left: 20%; animation-delay: 2s;">⭐</div>
+        <div class="floating-emoji" style="bottom: 15%; right: 10%; animation-delay: 3s;">🎵</div>
+        <div class="floating-emoji" style="top: 50%; left: 5%; animation-delay: 4s;">🎮</div>
+        <div class="floating-emoji" style="top: 70%; right: 25%; animation-delay: 5s;">📱</div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🎬 CATÁLOGO DE PRECIOS STREAMING 🔥</h1>
+            <div class="subtitle">✨ ACTUALIZADO 2025 - ¡LOS MEJORES PRECIOS! ✨</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🔥 ENTRETENIMIENTO Y TELEVISIÓN</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-name">♦️ NETFLIX</div>
+                    <div class="service-item">
+                        <span>Netflix 1 pantalla genérica x30 días</span>
+                        <span class="price">$14,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Netflix 1 pantalla original x30 días</span>
+                        <span class="price">$18,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Netflix cuenta completa original</span>
+                        <span class="price">$60,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🌀 HBO MAX</div>
+                    <div class="service-item">
+                        <span>HBO MAX 1 pantalla x30 días</span>
+                        <span class="price">$9,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>HBO MAX cuenta completa</span>
+                        <span class="price">$15,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🔵 DISNEY PLUS</div>
+                    <div class="service-item">
+                        <span>Disney+ 1 pantalla estándar x30 días</span>
+                        <span class="price">$9,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Disney+ 1 pantalla premium x30 días</span>
+                        <span class="price">$12,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">⚪ AMAZON PRIME VIDEO</div>
+                    <div class="service-item">
+                        <span>Amazon Prime 1 pantalla x30 días</span>
+                        <span class="price">$7,500</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Amazon Prime cuenta completa</span>
+                        <span class="price">$15,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🏔️ PARAMOUNT PLUS</div>
+                    <div class="service-item">
+                        <span>Paramount+ 1 pantalla x30 días</span>
+                        <span class="price">$7,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Paramount+ cuenta completa</span>
+                        <span class="price">$14,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">♣️ PLEX</div>
+                    <div class="service-item">
+                        <span>Plex 1 pantalla x30 días</span>
+                        <span class="price">$6,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Plex cuenta completa</span>
+                        <span class="price">$13,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🟠 VIX PREMIUM</div>
+                    <div class="service-item">
+                        <span>VIX 1 pantalla x30 días</span>
+                        <span class="price">$8,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>VIX cuenta completa</span>
+                        <span class="price">$12,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🟨 CRUNCHYROLL</div>
+                    <div class="service-item">
+                        <span>Crunchyroll x30 días</span>
+                        <span class="price">$10,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🟦 IPTV SMARTERS</div>
+                    <div class="service-item">
+                        <span>IPTV Smarters 1 pantalla x30 días</span>
+                        <span class="price">$15,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>IPTV Smarters cuenta completa</span>
+                        <span class="price">$35,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🟡⚫ PORNHUB</div>
+                    <div class="service-item">
+                        <span>Pornhub 1 pantalla x365 días</span>
+                        <span class="price">$25,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚽ DEPORTES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-name">🏀 WIN SPORTS & DEPORTES</div>
+                    <div class="service-item">
+                        <span>Claro Video + Win Sports 1 pantalla</span>
+                        <span class="price">$28,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Profe Net + Win Sports</span>
+                        <span class="price">$20,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>DirectTV GO</span>
+                        <span class="price">$28,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>DirectTV sin Win Sports</span>
+                        <span class="price">$20,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎵 MÚSICA Y PRODUCTIVIDAD</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-name">🥏 SPOTIFY</div>
+                    <div class="service-item">
+                        <span>Spotify x1 mes</span>
+                        <span class="price">$20,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Spotify x3 meses</span>
+                        <span class="price">$28,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">♥️ YOUTUBE PREMIUM</div>
+                    <div class="service-item">
+                        <span>YouTube Premium x1 mes</span>
+                        <span class="price">$17,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>YouTube Premium x3 meses</span>
+                        <span class="price">$25,000</span>
+                    </div>
+                    <div class="service-item">
+                        <span>YouTube Premium x4 meses</span>
+                        <span class="price">$30,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">✨ CANVA</div>
+                    <div class="service-item">
+                        <span>Canva Pro x30 días</span>
+                        <span class="price">$17,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">📗 PAQUETE OFFICE</div>
+                    <div class="service-item">
+                        <span>Office 365 x1 año</span>
+                        <span class="price">$55,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">🛜 DUOLINGO PRO</div>
+                    <div class="service-item">
+                        <span>Duolingo Pro x30 días</span>
+                        <span class="price">$10,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎮 VIDEOJUEGOS</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-name">🕹️ PLAYSTATION</div>
+                    <div class="service-item">
+                        <span>PlayStation Deluxe x12 meses</span>
+                        <span class="price">$450,000</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-name">💱 XBOX</div>
+                    <div class="service-item">
+                        <span>Xbox Game Pass x1 mes</span>
+                        <span class="price">$40,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section combo-section">
+            <h2 class="section-title">🔥 COMBOS ESPECIALES</h2>
+            
+            <div class="combo-card">
+                <div class="combo-title">🌟 COMBO BÁSICO "ENTRETENIMIENTO"</div>
+                <p><strong>Incluye:</strong> Netflix genérica + Amazon Prime + Disney+ estándar</p>
+                <p>Precio individual: $28,000</p>
+                <p>Precio combo: $22,000</p>
+                <div class="combo-savings">🎯 AHORRO: $6,000</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">⭐ COMBO PREMIUM "FULL STREAMING"</div>
+                <p><strong>Incluye:</strong> Netflix original + HBO MAX + Disney+ premium + Amazon completa + Paramount+</p>
+                <p>Precio individual: $66,000</p>
+                <p>Precio combo: $50,000</p>
+                <div class="combo-savings">🎯 AHORRO: $16,000</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">🏆 COMBO SÚPER "TODO INCLUIDO"</div>
+                <p><strong>Incluye:</strong> Netflix completa + HBO MAX completa + Disney+ premium + Amazon completa + Paramount+ + VIX + Crunchyroll</p>
+                <p>Precio individual: $120,000</p>
+                <p>Precio combo: $85,000</p>
+                <div class="combo-savings">🎯 AHORRO: $35,000</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">⚽ COMBO DEPORTIVO "WIN SPORTS+"</div>
+                <p><strong>Incluye:</strong> DirectTV GO + Win Sports + Netflix genérica + Amazon Prime</p>
+                <p>Precio individual: $47,000</p>
+                <p>Precio combo: $40,000</p>
+                <div class="combo-savings">🎯 AHORRO: $7,000</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">🎵 COMBO MÚSICA "SOUND PACK"</div>
+                <p><strong>Incluye:</strong> Spotify 1 mes + YouTube Premium 1 mes + Netflix genérica</p>
+                <p>Precio individual: $49,000</p>
+                <p>Precio combo: $42,000</p>
+                <div class="combo-savings">🎯 AHORRO: $7,000</div>
+            </div>
+        </div>
+
+        <div class="section combo-section">
+            <h2 class="section-title">💎 OFERTAS ESPECIALES</h2>
+            
+            <div class="combo-card">
+                <div class="combo-title">🎁 PAQUETE ESTUDIANTE</div>
+                <p><strong>Incluye:</strong> Netflix genérica + Disney+ + Duolingo Pro + Spotify</p>
+                <p>Precio combo: $35,000</p>
+                <div class="combo-savings">🎯 AHORRO: $15,500</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">👨‍👩‍👧‍👦 PAQUETE FAMILIA</div>
+                <p><strong>Incluye:</strong> Netflix completa + Disney+ premium + Amazon completa + YouTube Premium</p>
+                <p>Precio combo: $70,000</p>
+                <div class="combo-savings">🎯 AHORRO: $22,000</div>
+            </div>
+
+            <div class="combo-card">
+                <div class="combo-title">🏢 PAQUETE PROFESIONAL</div>
+                <p><strong>Incluye:</strong> Office 365 + Canva Pro + Netflix original + YouTube Premium</p>
+                <p>Precio combo: $80,000</p>
+                <div class="combo-savings">🎯 AHORRO: $19,000</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">✅ GARANTÍAS Y BENEFICIOS</h2>
+            <div class="guarantee-item">
+                <div class="emoji">✅</div>
+                <div>
+                    <strong>Garantía 30 días</strong> - Si no funciona, se reemplaza
+                </div>
+            </div>
+            <div class="guarantee-item">
+                <div class="emoji">✅</div>
+                <div>
+                    <strong>Soporte 24/7</strong> - Atención inmediata por WhatsApp
+                </div>
+            </div>
+            <div class="guarantee-item">
+                <div class="emoji">✅</div>
+                <div>
+                    <strong>Activación inmediata</strong> - En menos de 30 minutos
+                </div>
+            </div>
+            <div class="guarantee-item">
+                <div class="emoji">✅</div>
+                <div>
+                    <strong>Cuentas originales</strong> - Directamente de proveedores oficiales
+                </div>
+            </div>
+            <div class="guarantee-item">
+                <div class="emoji">✅</div>
+                <div>
+                    <strong>Sin restricciones</strong> - Funciona en cualquier dispositivo
+                </div>
+            </div>
+        </div>
+
+        <div class="section contact-section">
+            <h2 class="section-title">📱 CONTACTO Y PAGO</h2>
+            <div class="contact-info">
+                <strong>📱 WhatsApp:</strong> 3219420911
+            </div>
+            <div class="contact-info">
+                <strong>🕐 Horario:</strong> Lunes a Domingo 8:00 AM - 10:00 PM
+            </div>
+            <div class="contact-info">
+                <strong>💳 Método de Pago:</strong> Nequi
+            </div>
+            <a href="https://wa.me/573219420911" class="whatsapp-btn">
+                💬 ¡CONTACTAR POR WHATSAPP!
+            </a>
+            <div style="margin-top: 30px; font-size: 1.5rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                🔥 ¡COMPRA SEGURA CON NOSOTROS - 100% RECOMENDADOS! 🔥
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animación adicional para elementos cuando aparecen en viewport
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin:
